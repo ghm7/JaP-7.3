@@ -15,6 +15,7 @@ var inputs = document.querySelectorAll("input");
 var email = inputs[0];
 var name = inputs[1];
 var surname= inputs[2];
+var checkbox=inputs[3];
 
 for (var i=0; i<inputs.length; i++)
     if (inputs [i].value === "") {
@@ -22,5 +23,15 @@ for (var i=0; i<inputs.length; i++)
     return false;
     }
 
-//if (passwords[0].value.length < 6) 
+if (passwords[0].value.length < 6) {
+    return false
+}
+if (passwords[0].value !== passwords[1].value){
+    return false;
+}
+if (!checkbox.checked){
+    return false
+}
+
 })
+
